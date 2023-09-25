@@ -15,12 +15,4 @@ vm_min = df["valor"].min()
 plt.bar(dm_max,vm_max)
 plt.bar(dm_min,vm_min)
 plt.show()
-"""
-Tentativa falha de achar o maximo e o minimo por ano
-df_dataaux = pd.to_datetime(df['data'], format='%d/%m/%Y')
-dm_max11 = df[df_dataaux.dt.year == 2011]
-vm_max11 = df[df_dataaux.dt.year == 2011]['valor'].max()
 
-plt.bar(dm_max11,dm_max11)
-plt.show()
-"""
