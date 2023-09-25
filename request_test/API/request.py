@@ -4,10 +4,8 @@ print("Qual a data inicial e final que vocÃª deseja consultar? Ex 01/01/2010 atÃ
 
 InitialDate = input("Data inicial: ")
 FinalDate = input("Data final: ")
+requestUrl = f"https://api.bcb.gov.br/dados/serie/bcdata.sgs.20716/dados?formato=csv&dataInicial={InitialDate}&dataFinal={FinalDate}"
 
 
-r = requests.get("https://api.bcb.gov.br/dados/serie/bcdata.sgs.20716/dados?formato=csv&dataInicial={InitialDate}&dataFinal={FinalDate} ")
+r = requests.get(requestUrl)
 print(r.content)
-
-
-
