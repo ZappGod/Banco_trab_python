@@ -8,3 +8,6 @@ FinalDate = input("Data final: ")
 
 r = requests.get("https://api.bcb.gov.br/dados/serie/bcdata.sgs.20716/dados?formato=csv&dataInicial={InitialDate}&dataFinal={FinalDate} ")
 print(r.content)
+
+
+
