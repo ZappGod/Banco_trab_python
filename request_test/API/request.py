@@ -2,9 +2,10 @@ import requests
 from datetime import datetime
 
 
-def date_validation(data,data1):
+def date_validation(initial,final):
     try:
-        datetime.strptime(data,data1 '%d%m%y')
+        datetime.strptime(initial,'%d/%m/%Y')
+        datetime.strptime(final, '%d/%m/%Y')
         return True
     except ValueError:
         return False
@@ -14,21 +15,10 @@ print("Qual a data inicial e final que você deseja consultar? Ex 01/01/2010 at�
 
 InitialDate = input("Data inicial: ")
 FinalDate = input("Data final: ")
-requestUrl = f"https://api.bcb.gov.br/dados/serie/bcdata.sgs.20716/dados?formato=csv&dataInicial={InitialDate}&dataFinal={FinalDate}"
 
-<<<<<<< HEAD
-
-r = requests.get(requestUrl)
-print(r.content)
-=======
-if date_validation(InitialDate,FinalDate) == True:
-    pf = requests.get(f"https://api.bcb.gov.br/dados/serie/bcdata.sgs.20716/dados?formato=csv&dataInicial={InitialDate}&dataFinal={FinalDate}")
-    pj = requests.get(f"https://api.bcb.gov.br/dados/serie/bcdata.sgs.20718/dados?formato=csv&dataInicial={InitialDate}&dataFinal={FinalDate}")
+if date_validation(InitialDate,FinalDate):
+    pf = requests.get(f"https://api.bcb.gov.br/dados/serie/bcdata.sgs.20716/dados?formato=json&dataInicial={InitialDate}&dataFinal={FinalDate}")
+    pj = requests.get(f"https://api.bcb.gov.br/dados/serie/bcdata.sgs.20718/dados?formato=json&dataInicial={InitialDate}&dataFinal={FinalDate}")
 else:
-    print("O formato da data é incorreto tente novamente.")
+    print("O padrão da data inserido é inválido")
 
-
-
-print(pf.content)
-print(pj.content)
->>>>>>> 7eafb16 (datetime_validation)
