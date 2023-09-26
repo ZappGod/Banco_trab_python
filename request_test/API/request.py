@@ -20,5 +20,5 @@ if date_validation(InitialDate,FinalDate):
     pf = requests.get(f"https://api.bcb.gov.br/dados/serie/bcdata.sgs.20716/dados?formato=json&dataInicial={InitialDate}&dataFinal={FinalDate}")
     pj = requests.get(f"https://api.bcb.gov.br/dados/serie/bcdata.sgs.20718/dados?formato=json&dataInicial={InitialDate}&dataFinal={FinalDate}")
 else:
-    print("O padrão da data inserido é inválido")
+    print("O padrão da data inserido é inválido.")
 
