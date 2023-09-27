@@ -24,6 +24,6 @@ O arquivo `main.py` é o arquivo principal da execução do sistema.
 
 O arquivo `requirements.txt` é responsável por conter as dependências do projeto.
 
-O arquivo `MaxMinTot.py` é responsável por gerar os gráficos de comparação da taxa de média de juros mensal entre pessoas físicas e pessoas jurídicas, em determinado período de tempo escolhido pelo usuário.
+O arquivo `MaxMinTot.py` é responsável por gerar o gráfico dos valores mínimos e máximos taxa de juros de todos os anos para pessoas físicas e jurídicas.
 
-O arquivo `graphAvg.py` é responsável por gerar os gráficos de comparação da taxa de média de juros anual entre pessoas físicas e pessoas jurídicas, em determinado ano escolhido pelo usuário.
+O arquivo `graphAvg.py` é responsável por gerar o gráfico de média da taxa de juros anual para pessoas físicas e jurídicas, em determinado ano escolhido pelo usuário
