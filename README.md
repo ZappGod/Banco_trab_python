@@ -17,9 +17,8 @@ Instalação de dependências:
 Após a execução, o sistema abrirá um menu de opções para o usuário, onde ele poderá escolher entre as opções:
 
 1. Mostrar gráficos
-2. Documentação
-3. Requisitos
-4. Sair
+2. Requisitos
+3. Sair
 
 Basta digitar o número da opção desejada e apertar enter.
 Após isso o sistema irá mostrar os dados correspondentes a opção escolhida.
