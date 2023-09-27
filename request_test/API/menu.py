@@ -47,25 +47,20 @@ def plotar_graficos_menu():
             print("Opção inválida. Tente novamente.")
 
 def plotar_maximo_minimo():
-    result = request_api.Request_api()
-    pf = result['pf']
-    pj = result['pj']
-    MaxMinTot.funcaoMaxMin(pf,pj)
+    pf, pj = request_api.Request_api() 
+    MaxMinTot.funcaoMaxMin(pf, pj)
 
 def plotar_media():
-    result = request_api.Request_api()
-    pf = result['pf']
-    pj = result['pj']
+    pf, pj = request_api.Request_api()
     graphAvg.GetAverageGraphPjPf(pj,pf)
 
-    print("Gráfico da média")
-
 def exibir_documentacao():
-    # Coloque aqui o código para exibir a documentação
-    print("Documentação")
+
+    print("Ainda não escrita")
 
 def exibir_requisitos():
-    # Coloque aqui o código para exibir os requisitos
+    
+
     print("Requisitos")
 
 menu()

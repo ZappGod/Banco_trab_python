@@ -1,7 +1,6 @@
 import requests
 from datetime import datetime
 
-
 def date_validation(initial,final):
     try:
         datetime.strptime(initial,'%d/%m/%Y')
@@ -19,5 +18,7 @@ def Request_api():
     if date_validation(InitialDate,FinalDate):
         pf = requests.get(f"https://api.bcb.gov.br/dados/serie/bcdata.sgs.20716/dados?formato=json&dataInicial={InitialDate}&dataFinal={FinalDate}")
         pj = requests.get(f"https://api.bcb.gov.br/dados/serie/bcdata.sgs.20718/dados?formato=json&dataInicial={InitialDate}&dataFinal={FinalDate}")
+        return pf,pj
     else:
         print("O padrão da data inserido é inválido.")
+
