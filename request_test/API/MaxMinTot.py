@@ -3,10 +3,8 @@ import matplotlib.pyplot as plt
 import request_api
 
 #Função para ver o máximo e o mínimo entre os anos
-def funcaoMaxMin():
+def funcaoMaxMin(pf,pj):
     
-    pf,pj = request_api.Request_api()
-
     #Pega os valores de pf e os transforma em números
     data = pf.json()
     df = pd.DataFrame(data)
