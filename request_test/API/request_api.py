@@ -1,6 +1,7 @@
 import requests
 from datetime import datetime
 
+# Faz a validação do padrão de data suportada pela API.
 def date_validation(initial,final):
     try:
         datetime.strptime(initial,'%d/%m/%Y')
@@ -9,6 +10,7 @@ def date_validation(initial,final):
     except ValueError:
         return False
 
+# Faz a requisição da API.
 def Request_api():
     print("Qual a data inicial e final que você deseja consultar? Ex 01/01/2010 até 31/12/2011")
 
@@ -21,4 +23,3 @@ def Request_api():
         return pf,pj
     else:
         print("O padrão da data inserido é inválido.")
-
