@@ -1,6 +1,6 @@
 # Banco_trab_python
 
-Trabalho de requisição de API e geração de gráficos em python
+Trabalho de requisição de API e geração de gráficos em Python
 
 Alunos: Anthonny Camargo, Gabriell Zappelini, Otávio Moraes, William Coscodai
 
@@ -14,11 +14,21 @@ Instalação de dependências:
 
 `python ./request_test/API/main.py`
 
+Após a execução, o sistema abrirá um menu de opções para o usuário, onde ele poderá escolher entre as opções:
+
+1. Mostrar gráficos
+2. Documentação
+3. Requisitos
+4. Sair
+
+Basta digitar o número da opção desejada e apertar enter.
+Após isso o sistema irá mostrar os dados correspondentes a opção escolhida.
+
 ## API
 
 O arquivo `request_api.py` é responsável pela requisição da API do banco central e retornar os dados.
 
-O arquivo `menu.py` é responsável por gerar o menu de opções para o usuário, e direciona-lo para o gráfico correspondente a opção escolhida.
+O arquivo `menu.py` é responsável por gerar o menu de opções para o usuário, e direciona-lo para a opção escolhida.
 
 O arquivo `main.py` é o arquivo principal da execução do sistema.
 
