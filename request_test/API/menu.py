@@ -1,3 +1,7 @@
+import graphAvg
+import MaxMinTot
+import request_api
+
 def menu():
     while True:
         print('''
@@ -43,11 +47,17 @@ def plotar_graficos_menu():
             print("Opção inválida. Tente novamente.")
 
 def plotar_maximo_minimo():
-    # Coloque aqui o código para plotar o gráfico máximo e mínimo
-    print("Gráfico máximo e mínimo")
+    result = request_api.Request_api()
+    pf = result['pf']
+    pj = result['pj']
+    MaxMinTot.funcaoMaxMin(pf,pj)
 
 def plotar_media():
-    # Coloque aqui o código para plotar o gráfico da média
+    result = request_api.Request_api()
+    pf = result['pf']
+    pj = result['pj']
+    graphAvg.GetAverageGraphPjPf(pj,pf)
+
     print("Gráfico da média")
 
 def exibir_documentacao():
